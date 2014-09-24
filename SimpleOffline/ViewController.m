@@ -53,6 +53,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
 }
 
 - (void) host:(NSString *)host didBecomeReachable:(BOOL)reachable {
+    // Enable the button when we are notified the host became reachable
     [[self connectButton] setEnabled:reachable];
     if (reachable){
         [self endObsvervingReachabilityStatusForHost:nil];
@@ -99,7 +100,8 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
         reachabilityRef = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, [host UTF8String]);
         if (SCNetworkReachabilitySetCallback(reachabilityRef, ReachabilityCallback, &context)){
             if (!SCNetworkReachabilitySetDispatchQueue(reachabilityRef, [self scNetworkQueue]) ){
-                //SCNetworkReachabilitySetCallback(reachabilityRef, NULL, NULL);
+                // Remove our callback if we can't use the queue
+                SCNetworkReachabilitySetCallback(reachabilityRef, NULL, NULL);
             }
             [self setCurrentReachability:reachabilityRef];
         }
@@ -111,6 +113,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
     if (!SCNetworkReachabilitySetDispatchQueue([self currentReachability], NULL) ){
         
     }
+    SCNetworkReachabilitySetCallback([self currentReachability], NULL, NULL);
 }
 
 static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConnectionFlags flags, void* info) {
