@@ -1,0 +1,10 @@
+//
+//  Tests.xcconfig
+//  SimpleOffline
+//
+//  Created by Dan Zinngrabe on 9/27/14.
+//  Copyright (c) 2014 Dan Zinngrabe. All rights reserved.
+//
+
+// radar 15250741
+GCC_WARN_PEDANTIC = NO

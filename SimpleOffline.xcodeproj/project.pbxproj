@@ -27,6 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BBEB7DF19D77E43000EFAE7 /* SimpleOffline.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimpleOffline.xcconfig; sourceTree = "<group>"; };
+		1BBEB7E019D77E57000EFAE7 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		1BBEB7E119D77E60000EFAE7 /* Analyzer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Analyzer.xcconfig; sourceTree = "<group>"; };
+		1BBEB7E219D78427000EFAE7 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
 		1BE3E90919D14B9100AC9C2D /* SimpleOffline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleOffline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE3E90D19D14B9100AC9C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BE3E90E19D14B9100AC9C2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +67,10 @@
 		1BE3E90019D14B9100AC9C2D = {
 			isa = PBXGroup;
 			children = (
+				1BBEB7DF19D77E43000EFAE7 /* SimpleOffline.xcconfig */,
+				1BBEB7E219D78427000EFAE7 /* Tests.xcconfig */,
+				1BBEB7E019D77E57000EFAE7 /* Warnings.xcconfig */,
+				1BBEB7E119D77E60000EFAE7 /* Analyzer.xcconfig */,
 				1BE3E90B19D14B9100AC9C2D /* SimpleOffline */,
 				1BE3E92519D14B9100AC9C2D /* SimpleOfflineTests */,
 				1BE3E90A19D14B9100AC9C2D /* Products */,
@@ -265,26 +273,19 @@
 /* Begin XCBuildConfiguration section */
 		1BE3E92A19D14B9100AC9C2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BBEB7DF19D77E43000EFAE7 /* SimpleOffline.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -292,9 +293,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -306,30 +305,22 @@
 		};
 		1BE3E92B19D14B9100AC9C2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BBEB7DF19D77E43000EFAE7 /* SimpleOffline.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -361,6 +352,7 @@
 		};
 		1BE3E93019D14B9100AC9C2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BBEB7E219D78427000EFAE7 /* Tests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -380,6 +372,7 @@
 		};
 		1BE3E93119D14B9100AC9C2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BBEB7E219D78427000EFAE7 /* Tests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -412,6 +405,7 @@
 				1BE3E92E19D14B9100AC9C2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BE3E92F19D14B9100AC9C2D /* Build configuration list for PBXNativeTarget "SimpleOfflineTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +414,7 @@
 				1BE3E93119D14B9100AC9C2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

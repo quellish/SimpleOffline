@@ -1,0 +1,16 @@
+//
+//  SimpleOffline.xcconfig
+//  SimpleOffline
+//
+//  Created by Dan Zinngrabe on 9/27/14.
+//  Copyright (c) 2014 Dan Zinngrabe. All rights reserved.
+//
+
+VALID_ARCHS = $(ARCHS_STANDARD_INCLUDING_64_BIT)
+ARCHS = $(ARCHS_STANDARD_INCLUDING_64_BIT)
+
+GCC_DYNAMIC_NO_PIC = NO
+LD_NO_PIE = NO
+
+#include "Warnings.xcconfig"
+#include "Analyzer.xcconfig"
