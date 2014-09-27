@@ -21,6 +21,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
 @implementation ViewController
 @synthesize scNetworkQueue;
 @synthesize connectButton;
+@synthesize currentReachability;
 
 - (void) awakeFromNib {
     dispatch_queue_t    queue  = NULL;
@@ -42,7 +43,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
     if (sender != nil){
         NSURL *URL = [NSURL URLWithString:@"http://www.google.com/"];
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue new] completionHandler:^(NSURLResponse *response, NSData __unused *data, NSError *error){
             if (response != nil){
                 // Request succeeded
             } else {
@@ -52,9 +53,10 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
     }
 }
 
-- (void) host:(NSString *)host didBecomeReachable:(BOOL)reachable {
+- (void) host:(NSString *)__unused host didBecomeReachable:(BOOL)reachable {
+    __strong UIButton    *button = [self connectButton];
     // Enable the button when we are notified the host became reachable
-    [[self connectButton] setEnabled:reachable];
+    [button setEnabled:reachable];
     if (reachable){
         [self endObsvervingReachabilityStatusForHost:nil];
     }
@@ -108,7 +110,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
     }
 }
 
-- (void) endObsvervingReachabilityStatusForHost:(NSString *)host {
+- (void) endObsvervingReachabilityStatusForHost:(NSString *)__unused host {
     // Un-set the dispatch queue
     if (!SCNetworkReachabilitySetDispatchQueue([self currentReachability], NULL) ){
         
@@ -116,7 +118,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
     SCNetworkReachabilitySetCallback([self currentReachability], NULL, NULL);
 }
 
-static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConnectionFlags flags, void* info) {
+static void ReachabilityCallback(SCNetworkReachabilityRef __unused target, SCNetworkConnectionFlags flags, void* info) {
     void (^callbackBlock)(SCNetworkReachabilityFlags) = (__bridge id)info;
     callbackBlock(flags);
 }
