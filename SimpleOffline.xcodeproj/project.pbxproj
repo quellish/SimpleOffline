@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BBEB7E519D784CA000EFAE7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1BBEB7E319D784CA000EFAE7 /* README.md */; };
 		1BE3E90F19D14B9100AC9C2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE3E90E19D14B9100AC9C2D /* main.m */; };
 		1BE3E91219D14B9100AC9C2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE3E91119D14B9100AC9C2D /* AppDelegate.m */; };
 		1BE3E91519D14B9100AC9C2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE3E91419D14B9100AC9C2D /* ViewController.m */; };
@@ -31,6 +32,7 @@
 		1BBEB7E019D77E57000EFAE7 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		1BBEB7E119D77E60000EFAE7 /* Analyzer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Analyzer.xcconfig; sourceTree = "<group>"; };
 		1BBEB7E219D78427000EFAE7 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
+		1BBEB7E319D784CA000EFAE7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1BE3E90919D14B9100AC9C2D /* SimpleOffline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleOffline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE3E90D19D14B9100AC9C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BE3E90E19D14B9100AC9C2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		1BE3E90019D14B9100AC9C2D = {
 			isa = PBXGroup;
 			children = (
+				1BBEB7E319D784CA000EFAE7 /* README.md */,
 				1BBEB7DF19D77E43000EFAE7 /* SimpleOffline.xcconfig */,
 				1BBEB7E219D78427000EFAE7 /* Tests.xcconfig */,
 				1BBEB7E019D77E57000EFAE7 /* Warnings.xcconfig */,
@@ -229,6 +232,7 @@
 			files = (
 				1BE3E91519D14B9100AC9C2D /* ViewController.m in Sources */,
 				1BE3E91219D14B9100AC9C2D /* AppDelegate.m in Sources */,
+				1BBEB7E519D784CA000EFAE7 /* README.md in Sources */,
 				1BE3E90F19D14B9100AC9C2D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
